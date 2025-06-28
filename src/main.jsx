@@ -8,6 +8,8 @@ import Routes from './Routes/Routes'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+
 <ContextApi children={<RouterProvider router={Routes}></RouterProvider>}></ContextApi>
+
   </StrictMode>,
 )
