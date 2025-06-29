@@ -16,6 +16,7 @@ const CheckOutModal = ({ service, onClose }) => {
             subcategory: subcategories,
             image,
             name: form.name.value,
+            address: form.address.value,
             email: form.email.value,
             phone: form.phone.value,
             date: form.date.value,
@@ -78,10 +79,19 @@ const CheckOutModal = ({ service, onClose }) => {
                             defaultValue={user?.displayName || ''}
                             required
                             placeholder="Your Name"
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-black    bg-white dark:bg-gray-700 dark:text-white w-full"
                         />
                     </div>
-
+                    {/* address*/}
+<div>
+                        <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">Your Name</label>
+                        <input
+                            name="address"
+                            required
+                            placeholder="Your address"
+                            className="input input-bordered border-black    bg-white dark:bg-gray-700 dark:text-white w-full"
+                        />
+                    </div>
                     {/* Date */}
                     <div>
                         <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">Date</label>
@@ -89,7 +99,7 @@ const CheckOutModal = ({ service, onClose }) => {
                             name="date"
                             type="date"
                             required
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-black    bg-white dark:bg-gray-700 dark:text-white w-full"
                         />
                     </div>
 
@@ -100,7 +110,7 @@ const CheckOutModal = ({ service, onClose }) => {
                             name="phone"
                             required
                             placeholder="Your Phone Number"
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-black   bg-white dark:bg-gray-700 dark:text-white w-full"
                         />
                     </div>
 
@@ -112,7 +122,7 @@ const CheckOutModal = ({ service, onClose }) => {
                             defaultValue={user?.email || ''}
                             required
                             placeholder="Your Email"
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-black   bg-white dark:bg-gray-700 dark:text-white w-full"
                         />
                     </div>
 {/* Service category */}
@@ -122,7 +132,7 @@ const CheckOutModal = ({ service, onClose }) => {
                             name="category"
                             value={category}
                             readOnly
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-black    bg-white dark:bg-gray-700 dark:text-white w-full"
                         />
 </div>
 {/* Service Subcategory */}
@@ -132,7 +142,7 @@ const CheckOutModal = ({ service, onClose }) => {
                             name="Subcategory"
                             value={`${subcategories}`}
                             readOnly
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-black    bg-white dark:bg-gray-700 dark:text-white w-full"
                         />
 </div>
                     {/* Price with Label */}
@@ -142,7 +152,7 @@ const CheckOutModal = ({ service, onClose }) => {
                             name="price"
                             value={`৳${price} (${priceComment})`}
                             readOnly
-                            className="input input-bordered w-full"
+                            className="input input-bordered border-black    bg-white dark:bg-gray-700 dark:text-white w-full"
                         />
                     </div>
 

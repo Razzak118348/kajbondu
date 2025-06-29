@@ -8,6 +8,10 @@ import Service from "../Pages/Service/Service";
 import MyBooking from "../Pages/MyBooking/MyBooking";
 import SingleBooking from "../Pages/SingleBooking/SingleBooking";
 import FindByCategory from "../Pages/FindByCategory/FindByCategory";
+import About from "../Pages/About/About";
+import WorkerApplication from "../Pages/WorkerApplication/WorkerApplication";
+import Admin from "../Pages/Admin/Admin";
+import AdminRoute from "./AdminRoute";
 
 const Routes = createBrowserRouter([
     {
@@ -44,6 +48,22 @@ const Routes = createBrowserRouter([
                 path: '/services/category/:category',
                 element:<FindByCategory ></FindByCategory>,
                 loader: ({ params }) => fetch(`http://localhost:3000/services/category/${params.category}`)
+            },
+            {
+                path:'/about',
+                element:<About></About>,
+                loader: () => fetch('/contact.json')
+            },
+            {
+                path:'/workerApplication',
+                element:<WorkerApplication></WorkerApplication>
+            },
+            {
+                path:'/admin',
+                element:<AdminRoute>
+                    <Admin></Admin>
+                </AdminRoute>,
+                loader:()=> fetch('http://localhost:3000/worker')
             }
         ]
 

@@ -8,16 +8,89 @@ const Navbar = () => {
   const { LogOut, user } = useAuth();
   const { theme, toggleTheme } = useTheme();
 
-  const navItems = (
-    <>
-      <li><NavLink to="/" className="font-semibold hover:text-blue-500 transition">Home</NavLink></li>
-      <li><NavLink to="/service" className="font-semibold hover:text-blue-500 transition">All Service</NavLink></li>
-      {user && (
-        <li><NavLink to="my-booking" className="font-semibold hover:text-blue-500 transition">My Booking</NavLink></li>
-      )}
-      <li><NavLink to="/about" className="font-semibold hover:text-blue-500 transition">About us</NavLink></li>
-    </>
-  );
+const navItems = (
+  <>
+    <li>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          `font-semibold transition ${
+            isActive ? "text-blue-600 underline underline-offset-4" : "hover:text-blue-500"
+          }`
+        }
+      >
+        Home
+      </NavLink>
+    </li>
+    <li>
+      <NavLink
+        to="/service"
+        className={({ isActive }) =>
+          `font-semibold transition ${
+            isActive ? "text-blue-600 underline underline-offset-4" : "hover:text-blue-500"
+          }`
+        }
+      >
+        All Service
+      </NavLink>
+    </li>
+    {user && (
+      <li>
+        <NavLink
+          to="/my-booking"
+          className={({ isActive }) =>
+            `font-semibold transition ${
+              isActive ? "text-blue-600 underline underline-offset-4" : "hover:text-blue-500"
+            }`
+          }
+        >
+          My Booking
+        </NavLink>
+      </li>
+    )}
+
+ <li>
+      <NavLink
+        to="/workerApplication"
+        className={({ isActive }) =>
+          `font-semibold transition ${
+            isActive ? "text-blue-600 underline underline-offset-4" : "hover:text-blue-500"
+          }`
+        }
+      >
+        Apply as Worker
+      </NavLink>
+    </li>
+
+    {user?.email==="abdurrazzak118348@gmail.com" && (
+      <li>
+        <NavLink
+          to="/admin"
+          className={({ isActive }) =>
+            `font-semibold transition ${
+              isActive ? "text-blue-600 underline underline-offset-4" : "hover:text-blue-500"
+            }`
+          }
+        >
+          Admin
+        </NavLink>
+      </li>
+    )}
+
+    <li>
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          `font-semibold transition ${
+            isActive ? "text-blue-600 underline underline-offset-4" : "hover:text-blue-500"
+          }`
+        }
+      >
+        About us
+      </NavLink>
+    </li>
+  </>
+);
 
   return (
     <nav className="bg-white dark:bg-gray-900 text-black dark:text-white shadow-md sticky top-0 z-50 transition-all">

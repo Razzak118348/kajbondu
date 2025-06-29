@@ -200,7 +200,7 @@ const SingleBooking = () => {
               </div>
             </div>
 
-            <div>
+            <div className='bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl mt-6'>
               <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Description</h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{description}</p>
               <hr className="border-t mt-4 border-gray-300 dark:border-gray-600" />

@@ -1,0 +1,24 @@
+[
+    {
+      "role": "CEO(Founder)",
+      "name": "Abdur Razzak",
+      "email": "abdurrazzak118348@gmail.com",
+      "phone": "01690298525",
+      "image": "/images/razzakpic.png"
+    },
+    {
+      "role": "COO(Chief Operating Officer)",
+      "name": "Al Rafatul Hasib",
+      "email": "alfat422@gmail.com",
+      "phone": "01611535904",
+      "image": "/images/hasib.jpg"
+    },
+    {
+      "role": "CFO(Chief Financial Officer)",
+      "name": "Fahim Hossain Dipo",
+      "email": "fahimdipu9@gmail.com",
+      "phone": "01792447035",
+      "image": "/images/dipu.jpg"
+    }
+  ]
+  
