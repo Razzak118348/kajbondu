@@ -1,10 +1,8 @@
-import React from 'react';
+import GetAllService from '../../Components/GetAllService/GetAllService';
 
 const Service = () => {
     return (
-        <div>
-            
-        </div>
+        <GetAllService></GetAllService>
     );
 };
 

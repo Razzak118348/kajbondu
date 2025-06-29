@@ -6,6 +6,8 @@ import Signup from "../Pages/Signup/Signup";
 import PrivetRout from "./PrivateRoute";
 import Booking from "../Pages/Booking/Booking";
 import Service from "../Pages/Service/Service";
+import MyBooking from "../Pages/MyBooking/MyBooking";
+import SingleBooking from "../Pages/SingleBooking/SingleBooking";
 
 const Routes = createBrowserRouter([
     {
@@ -32,7 +34,18 @@ const Routes = createBrowserRouter([
             {
                 path:'/service',
                 element:<Service></Service>
+            },
+            {
+                path:'/my-booking',
+                element:<MyBooking></MyBooking>
+            },
+            {
+                path:'/service/:id',
+                element:<PrivetRout children={<SingleBooking></SingleBooking>}></PrivetRout>,
+                loader:({params})=>fetch(`https:localhost:3000/service/${params.id}`)
+
             }
+
         ]
 
     }

@@ -1,50 +1,50 @@
 [
   {
     "id": 1,
-    "image": "/assets/images/banner/1.jpg",
+    "image": "./images/cleanHouse.jpg",
     "title": "Professional Home Cleaning Services",
     "description": "From kitchens to bedrooms, we make your home shine with professional cleaning."
   },
   {
     "id": 2,
-    "image": "/assets/images/banner/3.jpg",
+    "image": "./images/painting.jpg",
     "title": "Top-Notch Home Painting Solutions",
     "description": "Give your home a makeover with our affordable painting packages."
   },
   {
     "id": 3,
-    "image": "/assets/images/banner/2.jpg",
+    "image": "./images/electical.jpg",
     "title": "Expert Electrical Repairs & Installations",
     "description": "Certified electricians for safe and reliable service, anytime."
   },
   {
     "id": 4,
-    "image": "/assets/images/banner/4.jpg",
+    "image": "./images/shifting.jpg",
     "title": "Safe & Quick Furniture Shifting",
     "description": "Local or long-distance – we move it all with care and efficiency."
   },
   {
     "id": 5,
-    "image": "/assets/images/banner/5.jpg",
+    "image": "./images/tuition.jpg",
     "title": "Hire the Best Private Tutors at Home",
     "description": "One-to-one tuition support from qualified and verified tutors."
   },
   {
     "id": 6,
-    "image": "/assets/images/banner/repair.jpg",
+    "image": "./images/repair.jpg",
     "title": "Home Repair & Maintenance Services",
     "description": "From doors to roofs, our expert repair team is ready to fix it fast."
   },
   {
     "id": 7,
-    "image": "/assets/images/banner/6.jpg",
+    "image": "./images/plumbing.jpg",
     "title": "Reliable Plumbing Services",
     "description": "Fix leaks, install pipes, and get instant plumbing help at your doorstep."
   },
   {
     "id": 8,
-    "image": "/assets/images/banner/labor.jpg",
-    "title": "Hire Skilled Labor for Your Needs",
+    "image": "./images/labourer.png",
+    "title": "Hire Skilled Laborer for Your Needs",
     "description": "On-demand laborers for construction, loading, or home improvements."
   }
 ]

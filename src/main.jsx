@@ -5,7 +5,6 @@ import ContextApi from './Context/ContextApi'
 import { RouterProvider } from 'react-router-dom'
 import Routes from './Routes/Routes'
 
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 

@@ -1,10 +1,10 @@
 [
-  { "id": 1, "title": "Cleaning", "icon": "MdCleaningServices", "color": "bg-blue-100" },
-  { "id": 2, "title": "Painting", "icon": "FaPaintRoller", "color": "bg-green-100" },
-  { "id": 3, "title": "Electrical", "icon": "FaPlug", "color": "bg-yellow-100" },
-  { "id": 4, "title": "Shifting", "icon": "FaTruck", "color": "bg-pink-100" },
-  { "id": 5, "title": "Tuition", "icon": "FaUserGraduate", "color": "bg-indigo-100" },
-  { "id": 6, "title": "Repair", "icon": "FaTools", "color": "bg-cyan-100" },
-  { "id": 7, "title": "Plumbing", "icon": "MdPlumbing", "color": "bg-orange-100" },
-  { "id": 8, "title": "Labor", "icon": "GiPikeman", "color": "bg-purple-100" }
+  { "id": 1, "category": "Cleaning", "icon": "MdCleaningServices", "color": "bg-blue-100" },
+  { "id": 2, "category": "Painting", "icon": "FaPaintRoller", "color": "bg-green-100" },
+  { "id": 3, "category": "Electrical", "icon": "FaPlug", "color": "bg-yellow-100" },
+  { "id": 4, "category": "Shifting", "icon": "FaTruck", "color": "bg-pink-100" },
+  { "id": 5, "category": "Tuition", "icon": "FaUserGraduate", "color": "bg-indigo-100" },
+  { "id": 6, "category": "Repair", "icon": "FaTools", "color": "bg-cyan-100" },
+  { "id": 7, "category": "Plumbing", "icon": "MdPlumbing", "color": "bg-orange-100" },
+  { "id": 8, "category": "Laborer", "icon": "GiPikeman", "color": "bg-purple-300" }
 ]

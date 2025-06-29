@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAuth from "../../hooks/useAuth";
+import SocialLogin from "../../Components/SocialMediaLogin/SocialLogin";
 
 const Signup = () => {
   const [passwordType, setPasswordType] = useState(false);
@@ -72,7 +73,8 @@ const Signup = () => {
           <p className="text-sm text-center text-gray-500 dark:text-gray-300 mb-6">
             Join and start your creative journey!
           </p>
-
+<SocialLogin></SocialLogin>
+<h2 className="text-lg text-center pt-3"> Or</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             {/* Name */}
             <div>

@@ -8,6 +8,7 @@ import { MdCleaningServices, MdPlumbing } from "react-icons/md";
 import { FaPaintRoller, FaPlug, FaUserGraduate, FaTruck, FaTools } from "react-icons/fa";
 import { GiPikeman } from "react-icons/gi";
 import ShareButton from "../../../Components/ShareButton/ShareButton";
+import useAuth from "../../../hooks/useAuth";
 
 // Icon Map
 const iconMap = {
@@ -20,9 +21,20 @@ const iconMap = {
     MdPlumbing: <MdPlumbing />,
     GiPikeman: <GiPikeman />
 };
-
+// colorMap
+const colorMap = {
+  MdCleaningServices: "bg-blue-100",
+  FaPaintRoller: "bg-green-100",
+  FaPlug: "bg-yellow-100",
+  FaTruck: "bg-pink-200",
+  FaUserGraduate: "bg-indigo-200",
+  FaTools: "bg-cyan-100",
+  MdPlumbing: "bg-orange-100",
+  GiPikeman: "bg-purple-300",
+};
 const HomepageComponent = () => {
     const [services, setServices] = useState([]);
+const{ user }= useAuth();
 
     useEffect(() => {
         axios.get("/services.json")
@@ -31,7 +43,7 @@ const HomepageComponent = () => {
     }, []);
 
     return (
-        <div className="bg-white dark:bg-gray-900 transition-colors duration-500">
+        <div className="bg-white dark:bg-gray-900 transition-colors duration-500 mt-0">
 
            {/* Hero Section */}
 <section className="relative overflow-hidden text-gray-800 dark:text-white bg-gradient-to-br from-indigo-100 via-blue-100 to-purple-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 transition-colors duration-500">
@@ -48,7 +60,7 @@ const HomepageComponent = () => {
       <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
         Experience effortless service booking with <span className="font-medium text-blue-600 dark:text-yellow-400">kajBondu</span> — from Cleaning, Painting, Electrical, Shifting, Tuition, Repair, Plumbing to Labor. All your home needs in one smart platform.
       </p>
-      <Link to="/signup">
+      <Link to={user ? "/service" : "/signup"}>
         <ShareButton text={"Get Started"} />
       </Link>
     </motion.div>
@@ -69,14 +81,16 @@ const HomepageComponent = () => {
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
-                            whileHover={{ scale: 1.05 }}
-                            className={`p-4 max-w-44 mx-auto rounded-xl shadow-md ${service.color} dark:shadow-gray-700 transition-all`}
+                            whileHover={{ scale: 1.15 }}
+                            className={`p-4 w-28 lg:w-36 mx-auto rounded-xl shadow-md ${
+  colorMap[service.icon]
+} dark:shadow-gray-700 transition-all`}
                         >
                             <Link to={`/service/${service.id}`} className="text-4xl flex justify-center items-center text-blue-600 mb-3 dark:text-pink-600">
                                 {iconMap[service.icon]}
                             </Link>
                             <h3 className="text-xl font-semibold text-gray-700 dark:text-blue-500">
-                                {service.title}
+                                {service.category}
                             </h3>
                         </motion.div>
                     ))}

@@ -1,76 +1,91 @@
-import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut
+} from "firebase/auth";
 import app from "../Firebase/firebase.config";
-import { useEffect, useState } from "react";
-import { createContext } from "react";
+import { useEffect, useState, createContext } from "react";
+import axios from "axios";
 
-export const AuthContext = createContext(null)
+export const AuthContext = createContext(null);
 
-//social media provider
-const googleProvider = new GoogleAuthProvider()
-const githubProvider = new GithubAuthProvider()
+const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
+const ContextApi = ({ children }) => {
+  const auth = getAuth(app);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-const ContextApi = ({children}) => {
-  const auth = getAuth(app)
-  const [user,setUser]= useState(null)
-  const [loading,setLoading]=useState(true)
+  // ✅ New state to hold all service data
+  const [serviceContent, setServiceContent] = useState([]);
 
-  //creat user
-  const creatUser =(email,password)=>{
-    setLoading(true)
-    return createUserWithEmailAndPassword(auth,email,password)
+  // 🔄 Fetch services once at app load
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/services") // your backend endpoint
+      .then(res => setServiceContent(res.data))
+      .catch(err => console.error("Service fetch error:", err));
+  }, []);
 
-  }
-
-  //signin user
-  const SignInUser = (email,password) => {
+  // create user
+  const creatUser = (email, password) => {
     setLoading(true);
-    return signInWithEmailAndPassword(auth,email,password)
-  }
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
 
-  //google login
-  const googleLogin=()=>{
-    setLoading(true)
-    return signInWithPopup(auth,googleProvider)
-  }
+  // sign in
+  const SignInUser = (email, password) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, password);
+  };
 
-  //github login
-  const gitHubLogin =()=>{
-    setLoading(true)
-    return signInWithPopup(auth,githubProvider)
-  }
+  const googleLogin = () => {
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
+  };
 
-  //observer
-  useEffect(()=>{
-    const unSubscribe = onAuthStateChanged(auth,(currentUser)=>{
-      setUser(currentUser)
-      setLoading(false)
+  const gitHubLogin = () => {
+    setLoading(true);
+    return signInWithPopup(auth, githubProvider);
+  };
+
+  const LogOut = () => {
+    setLoading(true);
+    return signOut(auth);
+  };
+
+  // observer
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, currentUser => {
+      setUser(currentUser);
+      setLoading(false);
     });
-return ()=>{
-  unSubscribe();
-}
-  },[])
+    return () => unSubscribe();
+  }, []);
 
-const LogOut =()=>{
-  setLoading(true)
-  setUser(null)
-  signOut(auth)
-}
+  // ✅ Combine all data in one context object
+  const authInfo = {
+    user,
+    creatUser,
+    SignInUser,
+    LogOut,
+    loading,
+    googleLogin,
+    gitHubLogin,
+    serviceContent // ✅ make services available globally
+  };
 
-
-const authInfo = {
-  user,
-  creatUser,
-  SignInUser,
-  LogOut,
-  loading,
-  googleLogin,
-  gitHubLogin}
-
-
-    return (
-        <AuthContext.Provider value={authInfo} >{children}</AuthContext.Provider>
-    );
+  return (
+    <AuthContext.Provider value={authInfo}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 export default ContextApi;
