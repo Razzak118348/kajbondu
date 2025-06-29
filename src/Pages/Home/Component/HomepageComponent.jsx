@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
+import 'animate.css';
 
 // Icons
 import { MdCleaningServices, MdPlumbing } from "react-icons/md";
@@ -82,11 +83,11 @@ const{ user }= useAuth();
                         <motion.div
                             key={index}
                             whileHover={{ scale: 1.15 }}
-                            className={`p-4 w-28 lg:w-36 mx-auto rounded-xl shadow-md ${
+                            className={`p-4 animate__animated animate__swing animate__delay-2s w-28 lg:w-36 mx-auto rounded-xl shadow-md  ${
   colorMap[service.icon]
 } dark:shadow-gray-700 transition-all`}
                         >
-                            <Link to={`/service/${service.id}`} className="text-4xl flex justify-center items-center text-blue-600 mb-3 dark:text-pink-600">
+                            <Link to={`/services/category/${service.category}`} className="text-4xl flex justify-center items-center text-blue-600 mb-3 dark:text-pink-600">
                                 {iconMap[service.icon]}
                             </Link>
                             <h3 className="text-xl font-semibold text-gray-700 dark:text-blue-500">

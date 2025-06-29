@@ -23,13 +23,13 @@ const ContextApi = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   // ✅ New state to hold all service data
-  const [serviceContent, setServiceContent] = useState([]);
+  const [allService, setallService] = useState([]);
 
   // 🔄 Fetch services once at app load
   useEffect(() => {
     axios
       .get("http://localhost:3000/services") // your backend endpoint
-      .then(res => setServiceContent(res.data))
+      .then(res => setallService(res.data))
       .catch(err => console.error("Service fetch error:", err));
   }, []);
 
@@ -78,7 +78,7 @@ const ContextApi = ({ children }) => {
     loading,
     googleLogin,
     gitHubLogin,
-    serviceContent // ✅ make services available globally
+    allService // ✅ make services available globally
   };
 
   return (

@@ -4,10 +4,10 @@ import Layout from "../Layout/Layout";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 import PrivetRout from "./PrivateRoute";
-import Booking from "../Pages/Booking/Booking";
 import Service from "../Pages/Service/Service";
 import MyBooking from "../Pages/MyBooking/MyBooking";
 import SingleBooking from "../Pages/SingleBooking/SingleBooking";
+import FindByCategory from "../Pages/FindByCategory/FindByCategory";
 
 const Routes = createBrowserRouter([
     {
@@ -24,28 +24,27 @@ const Routes = createBrowserRouter([
                 element: <Login></Login>
             },
             {
-                path:'/signup',
-                element:<Signup></Signup>
+                path: '/signup',
+                element: <Signup></Signup>
             },
             {
-                path:'/booking',
-                element:<PrivetRout children={<Booking></Booking>}></PrivetRout>
+                path: '/service',
+                element: <Service></Service>
             },
             {
-                path:'/service',
-                element:<Service></Service>
+                path: '/my-booking',
+                element: <MyBooking></MyBooking>
             },
             {
-                path:'/my-booking',
-                element:<MyBooking></MyBooking>
+                path: '/services/id/:id',
+                element: <PrivetRout children={<SingleBooking></SingleBooking>}></PrivetRout>,
+                loader: ({ params }) => fetch(`http://localhost:3000/services/id/${params.id}`)
             },
             {
-                path:'/service/:id',
-                element:<PrivetRout children={<SingleBooking></SingleBooking>}></PrivetRout>,
-                loader:({params})=>fetch(`https:localhost:3000/service/${params.id}`)
-
+                path: '/services/category/:category',
+                element:<FindByCategory ></FindByCategory>,
+                loader: ({ params }) => fetch(`http://localhost:3000/services/category/${params.category}`)
             }
-
         ]
 
     }

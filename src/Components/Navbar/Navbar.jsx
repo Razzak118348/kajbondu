@@ -11,9 +11,8 @@ const Navbar = () => {
   const navItems = (
     <>
       <li><NavLink to="/" className="font-semibold hover:text-blue-500 transition">Home</NavLink></li>
-      <li><NavLink to="/service" className="font-semibold hover:text-blue-500 transition">Service</NavLink></li>
-      <li><NavLink to="/booking" className="font-semibold hover:text-blue-500 transition">Book a Service</NavLink></li>
-       {user && (
+      <li><NavLink to="/service" className="font-semibold hover:text-blue-500 transition">All Service</NavLink></li>
+      {user && (
         <li><NavLink to="my-booking" className="font-semibold hover:text-blue-500 transition">My Booking</NavLink></li>
       )}
       <li><NavLink to="/about" className="font-semibold hover:text-blue-500 transition">About us</NavLink></li>
@@ -47,7 +46,7 @@ const Navbar = () => {
             </div>
 
             <Link to="/" className="text-xl lg:text-3xl font-extrabold text-blue-500 dark:text-blue-400 flex">
-            <img className="w-12 h-10" src="../../../public/images/icon.png" alt="" />
+              <img className="w-12 h-10" src="../../../public/images/icon.png" alt="" />
               <NavTypewriter />
             </Link>
           </div>
