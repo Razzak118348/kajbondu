@@ -84,7 +84,7 @@ const CheckOutModal = ({ service, onClose }) => {
                     </div>
                     {/* address*/}
 <div>
-                        <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">Your Name</label>
+                        <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">Your Address</label>
                         <input
                             name="address"
                             required
@@ -99,7 +99,7 @@ const CheckOutModal = ({ service, onClose }) => {
                             name="date"
                             type="date"
                             required
-                            className="input input-bordered border-black    bg-white dark:bg-gray-700 dark:text-white w-full"
+                            className="input input-bordered border-black    bg-white text-black dark:bg-gray-700 dark:text-white w-full"
                         />
                     </div>
 

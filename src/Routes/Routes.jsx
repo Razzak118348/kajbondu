@@ -46,24 +46,43 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/services/category/:category',
-                element:<FindByCategory ></FindByCategory>,
+                element: <FindByCategory ></FindByCategory>,
                 loader: ({ params }) => fetch(`http://localhost:3000/services/category/${params.category}`)
             },
             {
-                path:'/about',
-                element:<About></About>,
+                path: '/about',
+                element: <About></About>,
                 loader: () => fetch('/contact.json')
             },
             {
-                path:'/workerApplication',
-                element:<WorkerApplication></WorkerApplication>
+                path: '/workerApplication',
+                element: <WorkerApplication></WorkerApplication>
             },
             {
-                path:'/admin',
-                element:<AdminRoute>
-                    <Admin></Admin>
-                </AdminRoute>,
-                loader:()=> fetch('http://localhost:3000/worker')
+                path: '/admin',
+                element: (
+                    <AdminRoute>
+                        <Admin />
+                    </AdminRoute>
+                ),
+                loader: async () => {
+                    const [workerRes, bookingRes] = await Promise.all([
+                        fetch('http://localhost:3000/worker'),
+                        fetch('http://localhost:3000/all-bookings'),
+                    ]);
+
+                    if (!workerRes.ok || !bookingRes.ok) {
+                        throw new Error('Failed to load admin data');
+                    }
+
+                    const [workers, bookings] = await Promise.all([
+                        workerRes.json(),
+                        bookingRes.json(),
+                    ]);
+
+                    return { workers, bookings };
+                }
+
             }
         ]
 

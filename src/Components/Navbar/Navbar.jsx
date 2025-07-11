@@ -119,7 +119,7 @@ const navItems = (
             </div>
 
             <Link to="/" className="text-xl lg:text-3xl font-extrabold text-blue-500 dark:text-blue-400 flex">
-              <img className="w-12 h-10" src="../../../public/images/icon.png" alt="" />
+              <img className="w-12 h-10" src="https://raw.githubusercontent.com/Razzak118348/kajbonduimage/main/Image/icon.png" alt="" />
               <NavTypewriter />
             </Link>
           </div>
