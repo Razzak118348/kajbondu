@@ -25,7 +25,7 @@ const CheckOutModal = ({ service, onClose }) => {
         };
 
         try {
-            const response = await fetch('http://localhost:3000/bookings', {
+            const response = await fetch('https://kajbondu-server.vercel.app/bookings', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

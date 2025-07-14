@@ -123,7 +123,7 @@ const Admin = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/bookings/${id}`);
+          await axios.delete(`https://kajbondu-server.vercel.app/bookings/${id}`);
           const updated = allBookings.filter((b) => b._id !== id);
           setAllBookings(updated);
           toast.success("Booking deleted successfully!");

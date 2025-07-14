@@ -41,7 +41,7 @@ const MyBooking = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/bookings/${id}`, {
+        fetch(`https://kajbondu-server.vercel.app/bookings/${id}`, {
           method: "DELETE",
         })
           .then((res) => {

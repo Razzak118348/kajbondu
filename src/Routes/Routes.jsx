@@ -42,12 +42,12 @@ const Routes = createBrowserRouter([
             {
                 path: '/services/id/:id',
                 element: <PrivetRout children={<SingleBooking></SingleBooking>}></PrivetRout>,
-                loader: ({ params }) => fetch(`http://localhost:3000/services/id/${params.id}`)
+                loader: ({ params }) => fetch(`https://kajbondu-server.vercel.app/services/id/${params.id}`)
             },
             {
                 path: '/services/category/:category',
                 element: <FindByCategory ></FindByCategory>,
-                loader: ({ params }) => fetch(`http://localhost:3000/services/category/${params.category}`)
+                loader: ({ params }) => fetch(`https://kajbondu-server.vercel.app/services/category/${params.category}`)
             },
             {
                 path: '/about',
@@ -67,8 +67,8 @@ const Routes = createBrowserRouter([
                 ),
                 loader: async () => {
                     const [workerRes, bookingRes] = await Promise.all([
-                        fetch('http://localhost:3000/worker'),
-                        fetch('http://localhost:3000/all-bookings'),
+                        fetch('https://kajbondu-server.vercel.app/worker'),
+                        fetch('https://kajbondu-server.vercel.app/all-bookings'),
                     ]);
 
                     if (!workerRes.ok || !bookingRes.ok) {

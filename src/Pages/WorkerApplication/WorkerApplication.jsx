@@ -16,7 +16,7 @@ const WorkerApplication = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/worker", data);
+      const res = await axios.post("https://kajbondu-server.vercel.app/worker", data);
       if (res.data.insertedId || res.data.acknowledged) {
         Swal.fire({
           icon: "success",

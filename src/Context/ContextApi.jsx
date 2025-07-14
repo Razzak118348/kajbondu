@@ -28,7 +28,7 @@ const ContextApi = ({ children }) => {
   // 🔄 Fetch services once at app load
   useEffect(() => {
     axios
-      .get("http://localhost:3000/services") // your backend endpoint
+      .get("https://kajbondu-server.vercel.app/services") // your backend endpoint
       .then(res => setallService(res.data))
       .catch(err => console.error("Service fetch error:", err));
   }, []);

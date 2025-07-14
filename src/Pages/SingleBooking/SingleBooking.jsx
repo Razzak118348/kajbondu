@@ -23,7 +23,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get(`http://localhost:3000/services/category/${category}`)
+//       .get(`https://kajbondu-server.vercel.app/services/category/${category}`)
 //       .then(res => setAllServiceByCategory(res.data))
 //       .catch(err => console.error("Service fetch error:", err));
 //   }, [category]);
@@ -150,7 +150,7 @@ const SingleBooking = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/services/category/${category}`)
+      .get(`https://kajbondu-server.vercel.app/services/category/${category}`)
       .then(res => setAllServiceByCategory(res.data))
       .catch(err => console.error("Service fetch error:", err));
   }, [category]);

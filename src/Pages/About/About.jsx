@@ -63,7 +63,7 @@ console.log("allMembers", allMembers);
           {/* Image */}
           <div className="overflow-hidden rounded-xl shadow-lg">
             <img
-              src="/public/images/icon.png"
+              src="https://raw.githubusercontent.com/Razzak118348/kajbonduimage/main/Image/icon.png"
               alt="About KajBondu"
               className="w-96 h-96 object-cover hover:scale-105 transition-transform duration-500"
             />
@@ -105,7 +105,7 @@ console.log("allMembers", allMembers);
           </p>
           <Link to={'/workerApplication'}>
           <button className="mt-4 px-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md transition">
-            Contact Us
+            Apply as a Worker
           </button></Link>
         </div>
       </div>

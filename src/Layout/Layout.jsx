@@ -15,7 +15,7 @@ const Layout = () => {
   return (
     <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen transition-colors duration-300 ease-in-out "
     style={{
-    backgroundImage: "url('../../public/images/bakground.png')",
+    backgroundImage: "url('https://raw.githubusercontent.com/Razzak118348/kajbonduimage/main/Image/bakground.png')",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
