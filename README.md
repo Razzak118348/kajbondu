@@ -1,12 +1,48 @@
-# React + Vite
+# KajBondu 🛠️ - Service Booking Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site**: [https://kajbondu.web.app/](https://kajbondu.web.app/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 About KajBondu
 
-## Expanding the ESLint configuration
+**KajBondu** is a modern web platform where users can effortlessly book various home and commercial services like cleaning, painting, plumbing, and more. This MERN-based platform provides seamless service browsing, filtering, and booking features.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Tech Stack
+
+| Frontend      | Backend          | Database  | Deployment       |
+|---------------|------------------|-----------|------------------|
+| React.js      | Node.js          | MongoDB   | Firebase Hosting |
+| Tailwind CSS  | Express.js       |           | Vercel->backend  |
+| React Router  | CORS Middleware  |           |                  |
+
+---
+
+## 🛠️ Key Features
+
+- 🔐 **User Authentication** (Firebase)
+- 📋 **Service Listings** with Filtering by Category
+- 📦 **Service Booking System**
+- ⚙️ **RESTful API Backend** (Node.js + Express)
+- 🔒 **CORS Protected API**
+- 🎨 **Modern UI** with Tailwind CSS
+- 🏷️ **Dynamic Service Categories**
+- 🌐 **Responsive & Mobile-Friendly Design**
+
+---
+
+## 📂 Project Structure
+
+```bash
+client/           # React Frontend
+ └── src/
+backend/          # Node.js Backend
+ └── index.js
+ └── routes/
+ └── controllers/
+database/         # MongoDB Collections
+
+git clone https://github.com/yourusername/kajbondu.git
+cd kajbondu
