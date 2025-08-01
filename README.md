@@ -2,7 +2,7 @@
 
 **Live Site**: [https://kajbondu.web.app/](https://kajbondu.web.app/)
 
-## Report
+## Report: [https://github.com/Razzak118348/kajbondu/blob/main/Final%20Report.pdf](https://github.com/Razzak118348/kajbondu/blob/main/Final%20Report.pdf)
 
 ---
 
