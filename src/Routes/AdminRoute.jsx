@@ -1,12 +1,15 @@
 import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
-
 const AdminRoute = ({ children }) => {
   const { user, loading } = useAuth();
   const location = useLocation();
 
-  const adminEmail = "abdurrazzak118348@gmail.com"; // ✅ Your admin email
+  const adminEmails = [
+    "abdurrazzak118348@gmail.com",
+    "alfat422@gmail.com",
+    "sheikhimtiyaz3333@gmail.com",
+  ];
 
   if (loading) {
     return (
@@ -16,7 +19,7 @@ const AdminRoute = ({ children }) => {
     );
   }
 
-  if (user && user.email === adminEmail) {
+  if (user && adminEmails.includes(user.email)) {
     return children;
   }
 

@@ -2,6 +2,8 @@
 
 **Live Site**: [https://kajbondu.web.app/](https://kajbondu.web.app/)
 
+## Report
+
 ---
 
 ## 📖 About KajBondu
@@ -44,5 +46,3 @@ backend/          # Node.js Backend
  └── controllers/
 database/         # MongoDB Collections
 
-git clone https://github.com/yourusername/kajbondu.git
-cd kajbondu

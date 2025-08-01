@@ -7,7 +7,8 @@ import NavTypewriter from "../NavTypewriter/NavTypewriter";
 const Navbar = () => {
   const { LogOut, user } = useAuth();
   const { theme, toggleTheme } = useTheme();
-
+console.log("user", user);
+console.log(user?.email);
 const navItems = (
   <>
     <li>
@@ -62,20 +63,21 @@ const navItems = (
       </NavLink>
     </li>
 
-    {user?.email==="abdurrazzak118348@gmail.com" && (
-      <li>
-        <NavLink
-          to="/admin"
-          className={({ isActive }) =>
-            `font-semibold transition ${
-              isActive ? "text-blue-600 underline underline-offset-4" : "hover:text-blue-500"
-            }`
-          }
-        >
-          Admin
-        </NavLink>
-      </li>
-    )}
+   {(user?.email === "abdurrazzak118348@gmail.com" || user?.email === "alfat422@gmail.com" || user?.email === "sheikhimtiyaz3333@gmail.com") && (
+  <li>
+    <NavLink
+      to="/admin"
+      className={({ isActive }) =>
+        `font-semibold transition ${
+          isActive ? "text-blue-600 underline underline-offset-4" : "hover:text-blue-500"
+        }`
+      }
+    >
+      Admin
+    </NavLink>
+  </li>
+)}
+
 
     <li>
       <NavLink
