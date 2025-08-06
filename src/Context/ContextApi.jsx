@@ -22,10 +22,10 @@ const ContextApi = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // ✅ New state to hold all service data
+
   const [allService, setallService] = useState([]);
 
-  // 🔄 Fetch services once at app load
+
   useEffect(() => {
     axios
       .get("https://kajbondu-server.vercel.app/services") // your backend endpoint
@@ -69,7 +69,7 @@ const ContextApi = ({ children }) => {
     return () => unSubscribe();
   }, []);
 
-  // ✅ Combine all data in one context object
+
   const authInfo = {
     user,
     creatUser,
@@ -78,7 +78,7 @@ const ContextApi = ({ children }) => {
     loading,
     googleLogin,
     gitHubLogin,
-    allService // ✅ make services available globally
+    allService
   };
 
   return (

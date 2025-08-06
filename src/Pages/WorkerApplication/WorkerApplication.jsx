@@ -138,6 +138,22 @@ const WorkerApplication = () => {
           />
           {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
         </div>
+        {/* NID card number or Birth Certificate Number */}
+        <div>
+          <label className="block text-gray-700 dark:text-gray-300 mb-1">NID or Birth Certificate Number</label>
+          <input
+            type="text"
+            {...register("nidOrBirthCertificate", {
+              pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: "Invalid NID or Birth Certificate number"
+              }
+            })}
+            className="input input-bordered border-black  w-full bg-white dark:bg-gray-700 dark:text-white"
+            placeholder="NID or Birth Certificate Number"
+          />
+          {errors.nidOrBirthCertificate && <p className="text-red-500 text-sm">{errors.nidOrBirthCertificate.message}</p>}
+        </div>
 
         {/* Preferred Category */}
         <div>

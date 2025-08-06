@@ -13,24 +13,22 @@ const Layout = () => {
   }, [theme]);
 
   return (
-    <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen transition-colors duration-300 ease-in-out "
-    style={{
-    backgroundImage: "url('https://raw.githubusercontent.com/Razzak118348/kajbonduimage/main/Image/bakground.png')",
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-  backgroundAttachment: 'fixed',
-  }}>
+    <div
+      className="min-h-screen transition-colors duration-300 ease-in-out
+    bg-white text-gray-800
+          dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-900 dark:to-gray-950 dark:text-white"
+    >
       {/* Global Navbar */}
       <Navbar />
 
       {/* Page Content */}
-      <main  className="max-w-7xl mx-auto px-4 md:px-8 "
-      >
+      <main className="max-w-7xl mx-auto px-4 md:px-8 py-6">
         <Outlet />
       </main>
-      <Footer></Footer>
+
+      <Footer />
     </div>
+
   );
 };
 

@@ -50,7 +50,7 @@ const Banner = () => {
 
         {/* Overlay Content */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent flex flex-col justify-center px-6 md:px-12 text-white rounded-t-xl">
-          <h2 className="text-2xl md:text-4xl font-bold drop-shadow-lg text-blue-200">
+          <h2 className="text-xl md:text-2xl font-bold drop-shadow-lg text-blue-200">
             {currentSlide.title}
           </h2>
           <p className="text-sm md:text-base mt-2 max-w-xl">
@@ -82,3 +82,5 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
