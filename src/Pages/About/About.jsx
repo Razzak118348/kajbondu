@@ -75,7 +75,7 @@ console.log("allMembers", allMembers);
               Who We Are
             </h2>
             <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-4">
-              KajBondu is a local service marketplace based in Dinajpur, Bangladesh. We connect skilled and verified professionals with people who need help—whether it’s cleaning, plumbing, repairing electronics, or shifting homes.
+              KajBondhu is a local service marketplace based in Dinajpur, Bangladesh. We connect skilled and verified professionals with people who need help—whether it’s cleaning, plumbing, repairing electronics, or shifting homes.
             </p>
 
             <h2 className="text-lg md:text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">

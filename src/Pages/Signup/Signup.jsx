@@ -60,7 +60,7 @@ const Signup = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 transition duration-300 p-4">
       <Helmet>
-        <title>SignUp | kajBondu</title>
+        <title>SignUp | kajBondhu</title>
       </Helmet>
       <ToastContainer autoClose={800} />
 

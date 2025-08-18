@@ -1,14 +1,14 @@
-# KajBondu 🛠️ - Service Booking Web Application
+# KajBondhu 🛠️ - Service Booking Web Application
 
-**Live Site**: [https://kajbondu.web.app/](https://kajbondu.web.app/)
+**Live Site**: [https://KajBondhu.web.app/](https://KajBondhu.web.app/)
 
-## Report: [https://github.com/Razzak118348/kajbondu/blob/main/Final%20Report.pdf](https://github.com/Razzak118348/kajbondu/blob/main/Final%20Report.pdf)
+## Report: [https://github.com/Razzak118348/KajBondhu/blob/main/Final%20Report.pdf](https://github.com/Razzak118348/KajBondhu/blob/main/Final%20Report.pdf)
 
 ---
 
-## 📖 About KajBondu
+## 📖 About KajBondhu
 
-**KajBondu** is a modern web platform where users can effortlessly book various home and commercial services like cleaning, painting, plumbing, and more. This MERN-based platform provides seamless service browsing, filtering, and booking features.
+**KajBondhu** is a modern web platform where users can effortlessly book various home and commercial services like cleaning, painting, plumbing, and more. This MERN-based platform provides seamless service browsing, filtering, and booking features.
 
 ---
 
