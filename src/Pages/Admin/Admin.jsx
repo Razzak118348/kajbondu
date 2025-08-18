@@ -196,6 +196,7 @@ const Admin = () => {
                 <th className="py-3 px-4">Age</th>
                 <th className="py-3 px-4">Gender</th>
                 <th className="py-3 px-4">Category</th>
+                <th className="py-3 px-4">NID or Birth Certificate Number</th>
                 <th className="py-3 px-4">Actions</th>
               </tr>
             </thead>
@@ -217,6 +218,7 @@ const Admin = () => {
                     <td className="px-4 py-3">{worker.age}</td>
                     <td className="px-4 py-3">{worker.gender}</td>
                     <td className="px-4 py-3">{worker.category}</td>
+                    <td className="px-4 py-3">{worker.nidOrBirthCertificate}</td>
                     <td className="px-4 py-3">
                       <button
                         onClick={() => handleDeleteWorker(worker._id)}

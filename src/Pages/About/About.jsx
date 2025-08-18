@@ -51,7 +51,7 @@ console.log("allMembers", allMembers);
         {/* Heading */}
         <div className="text-center mb-12">
           <h1 className="text-xl md:text-3xl font-bold text-blue-600 dark:text-blue-400 mb-4">
-            About KajBondu
+            About KajBondhu
           </h1>
           <p className=" md:text-lg text-gray-600 dark:text-gray-300">
             Empowering households & businesses in Dinajpur through on-demand trusted services.
@@ -64,7 +64,7 @@ console.log("allMembers", allMembers);
           <div className="overflow-hidden rounded-xl shadow-lg">
             <img
               src="https://raw.githubusercontent.com/Razzak118348/kajbonduimage/main/Image/icon.png"
-              alt="About KajBondu"
+              alt="About KajBondhu"
               className="w-96 h-96 object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>

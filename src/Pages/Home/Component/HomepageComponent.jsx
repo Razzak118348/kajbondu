@@ -64,10 +64,10 @@ const HomepageComponent = () => {
             className="space-y-4"
           >
             <h1 className="text-xl md:text-2xl font-extrabold leading-snug bg-gradient-to-r from-blue-600 to-purple-500 text-transparent bg-clip-text dark:from-yellow-300 dark:to-pink-400">
-              Welcome to <span className=" decoration-wavy decoration-pink-400">kajBondu</span>
+              Welcome to <span className=" decoration-wavy decoration-pink-400">kajBondhu</span>
             </h1>
             <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-              Experience effortless service booking with <span className="font-semibold text-blue-600 dark:text-yellow-300">kajBondu</span> — from Cleaning, Painting, Electrical, Shifting, Tuition, Repair, Plumbing to Labor. All your home needs in one smart platform.
+              Experience effortless service booking with <span className="font-semibold text-blue-600 dark:text-yellow-300">kajBondhu</span> — from Cleaning, Painting, Electrical, Shifting, Tuition, Repair, Plumbing to Labor. All your home needs in one smart platform.
             </p>
             <Link to={user ? "/service" : "/signup"}>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

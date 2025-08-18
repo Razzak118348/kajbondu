@@ -12,12 +12,14 @@ import About from "../Pages/About/About";
 import WorkerApplication from "../Pages/WorkerApplication/WorkerApplication";
 import Admin from "../Pages/Admin/Admin";
 import AdminRoute from "./AdminRoute";
+import Error from "../Pages/Error/Error";
 
 const Routes = createBrowserRouter([
     {
 
         path: '/',
         element: <Layout></Layout>,
+        errorElement:<Error></Error>,
         children: [
             {
                 path: '/',
